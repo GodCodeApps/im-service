@@ -1,0 +1,29 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8084
+  resources:
+    static-locations: classpath:/
+spring:
+  mvc:
+    view:
+      suffix: .html
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/templates/,classpath:/static/
+
+  datasource:
+    url: jdbc:mysql://8.129.109.206:3306/im?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2b8
+    username: im
+    password: 123456
+
+  global-config:
+    id-type: 0
+    db-column-underline: false
+    refresh-mapper: true
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.im.service.dao.entity
