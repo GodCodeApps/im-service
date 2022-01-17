@@ -5,9 +5,10 @@ import com.im.service.result.ResponseVO;
 import com.im.service.service.impl.MessageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Copyright (C), 2020-2021, 中传互动（湖北）信息技术有限公司
@@ -17,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @RestController
-@RequestMapping("/message")
+@RequestMapping(value = "/message")
 public class MessageController {
     @Autowired
     private MessageServiceImpl messageService;
 
     @RequestMapping("/list")
-    public ResponseVO find() {
+    public ResponseVO find(HttpServletResponse httpServletResponse) throws IOException {
         return ResponseVO.success(messageService.queryList());
     }
 }

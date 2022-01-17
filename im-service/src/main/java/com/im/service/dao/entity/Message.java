@@ -54,7 +54,7 @@ public class Message extends Model<Message> {
     /**
      * 发送时间
      */
-    private LocalDateTime time;
+    private Long time;
 
     /**
      * 消息体
@@ -137,11 +137,11 @@ public class Message extends Model<Message> {
         this.status = status;
     }
 
-    public LocalDateTime getTime() {
+    public Long getTime() {
         return time;
     }
 
-    public void setTime(LocalDateTime time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 
