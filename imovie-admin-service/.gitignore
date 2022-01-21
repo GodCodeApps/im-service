@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+admin-common/target/
+admin-generator/target/
+admin-logging/target/
+admin-monitor/target/
+admin-system/target/
+admin-tools/target/
+avatar/
+file/
+/admin-video/target/
+/admin-version/target/
+/admin-feedback/target/
+/admin-banner/target/
